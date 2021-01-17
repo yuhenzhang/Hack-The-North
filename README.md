@@ -1,7 +1,7 @@
 # Meter One
 
-Flutter Web App for Hack The North ++ 2020.
-Connected to Firebase storage. Allows clinicians to upload and view their pulse oximeter device recordings easily and securely.
+Flutter Web App for Hack The North 2020++.
+Connected to Firebase storage. Allows clinicians to upload and view their patients' pulse oximeter device recordings easily and securely.
 
 ## Getting Started
 
