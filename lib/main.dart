@@ -3,6 +3,8 @@ import 'dart:html';
 
 import 'package:firebase/firebase.dart' as fb;
 
+int noImages = 0;
+
 void main() {
   runApp(MyApp());
 }
@@ -127,16 +129,34 @@ class _MyHomePageState extends State<MyHomePage> {
 
                 if (progressPercent == 100) {
                   return Padding(
-                      padding: const EdgeInsets.all(8.0),
+                      padding: const EdgeInsets.all(15.0),
                       child: Text('Video Uploaded'));
                 } else if (progressPercent == 0) {
                   return SizedBox();
                 } else {
-                  return Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: LinearProgressIndicator(
-                      value: progressPercent,
-                    ),
+                  return Column(
+                    children: <Widget>[
+                      Padding(
+                        padding: EdgeInsets.fromLTRB(
+                          0,
+                          15,
+                          0,
+                          0,
+                        ),
+                        child: Text(
+                          '${(progressPercent).toStringAsFixed(2)} % ',
+                          style: TextStyle(
+                            color: Colors.black,
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.fromLTRB(80, 15, 80, 0),
+                        child: LinearProgressIndicator(
+                          value: progressPercent,
+                        ),
+                      )
+                    ],
                   );
                 }
               },
@@ -181,8 +201,9 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   uploadToFirebase(File imageFile) async {
-    final filePath = '${DateTime.now()}.mp4';
+    final filePath = '$noImages.mp4';
     setState(() {
+      noImages += 1;
       _uploadTask = fb
           .storage()
           .refFromURL('gs://hack-the-north-adc4b.appspot.com')
