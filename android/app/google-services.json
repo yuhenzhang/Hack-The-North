@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "293389247316",
+    "project_id": "hack-the-north-adc4b",
+    "storage_bucket": "hack-the-north-adc4b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:293389247316:android:5dfdbe8063348745245ec1",
+        "android_client_info": {
+          "package_name": "com.example.htn"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "293389247316-felmc8l3q5f1u6ripbueslvssjfqppuj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCdy8_iE7r37a4PGMRMnkKQJTiPwxvVweY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "293389247316-felmc8l3q5f1u6ripbueslvssjfqppuj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
